@@ -1,0 +1,14 @@
+interface:
+  display_name: "LaTeX \u8F6C Word"
+  short_description: "\u5C06\u5B8C\u6574 LaTeX \u8BBA\u6587\u5DE5\u7A0B\u9AD8\u4FDD\
+    \u771F\u8F6C\u6362\u4E3A\u53EF\u7F16\u8F91 Word \u6587\u6863"
+  default_prompt: "\u4F7F\u7528 $convert-latex-to-word \u5C06\u8FD9\u4E2A\u5B8C\u6574\
+    \ LaTeX \u8BBA\u6587\u5DE5\u7A0B\u8F6C\u6362\u4E3A\u7ECF\u8FC7\u9010\u9875\u6838\
+    \u9A8C\u7684\u53EF\u7F16\u8F91 Word \u6587\u6863\u3002"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
