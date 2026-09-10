@@ -1,0 +1,77 @@
+{
+  "version": "1.0",
+  "files": [
+    {
+      "id": "MAIN",
+      "path": "evals/fixtures/main.md",
+      "role": "main",
+      "sha256": "3a013c88ff280a177fbd0587e7f60a769ba313d62070b87fa4da00ffded6a4ac"
+    },
+    {
+      "id": "SI",
+      "path": "evals/fixtures/si.md",
+      "role": "si",
+      "sha256": "dda5d909c0515e4385f1d0c4214024cb123ec274a5f889316a97f4208d65baf0"
+    }
+  ],
+  "issues": [
+    {
+      "id": "JSA-0001",
+      "priority": "P1",
+      "confidence": "confirmed",
+      "category": "main-si consistency",
+      "perspective": [
+        "technical",
+        "methods_reviewer"
+      ],
+      "problem": "正文与 SI 对同一实验条件给出不同停留时间。",
+      "evidence": "正文 Methods 写为 12 s，而 SI Experimental conditions 写为 24 s，两者都称适用于全部实验。",
+      "impact": "读者无法确定实验条件，影响复现和结果解释。",
+      "action": "核对原始实验记录，确认是否属于同一组实验；随后统一数值，或明确不同工况。不要凭上下文猜测正确值。",
+      "effort": "verification",
+      "requires_author_confirmation": true,
+      "meaning_change": true,
+      "dependencies": [],
+      "locations": [
+        {
+          "file_id": "MAIN",
+          "line": 4,
+          "quote": "Residence time of 12 s was used in all experiments.",
+          "section": "Methods"
+        },
+        {
+          "file_id": "SI",
+          "line": 4,
+          "quote": "Residence time of 24 s was used in all experiments.",
+          "section": "Experimental conditions"
+        }
+      ]
+    },
+    {
+      "id": "JSA-0002",
+      "priority": "P3",
+      "confidence": "confirmed",
+      "category": "grammar",
+      "perspective": [
+        "language"
+      ],
+      "problem": "复数主语与谓语不一致。",
+      "evidence": "The measurements 为复数，原句使用 was。",
+      "impact": "语法错误，不涉及实验结论变化。",
+      "action": "将 was 改为 were。",
+      "effort": "text",
+      "requires_author_confirmation": false,
+      "meaning_change": false,
+      "suggested_english": "The measurements were recorded at steady state.",
+      "dependencies": [],
+      "locations": [
+        {
+          "file_id": "MAIN",
+          "line": 7,
+          "quote": "The measurements was recorded at steady state.",
+          "section": "Results"
+        }
+      ]
+    }
+  ]
+}

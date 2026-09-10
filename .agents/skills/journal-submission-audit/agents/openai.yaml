@@ -1,0 +1,6 @@
+interface:
+  display_name: "英文期刊投稿审核"
+  short_description: "正文与SI联合核查、模拟编辑和审稿人评估、原位批注与英文修改建议"
+  default_prompt: "Use $journal-submission-audit to audit my complete English manuscript and SI, assess them from simulated editor and reviewer perspectives, and create location-anchored comments with Chinese explanations and English revisions without overwriting originals."
+policy:
+  allow_implicit_invocation: true
