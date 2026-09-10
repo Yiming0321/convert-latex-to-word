@@ -1,4 +1,0 @@
-# Local helper dependencies. Review upstream licenses before redistribution.
-lxml>=5.3,<7
-jsonschema>=4.23,<5
-PyMuPDF>=1.26.7,<2
